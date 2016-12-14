@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Random Quote Machine</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.5.10/css/bootstrap-material-design.min.css" type="text/css">
+</head>
+
+<body>
+    <div class="container" style="margin-top: 20px">
+        <div class="col-md-offset-3 col-md-6">
+            <div class="jumbotron">
+                <h4>Quotes</h4>
+                <p>
+                  <i class="fa fa-quote-left"></i>
+                  <span id="quote-text">New Quote</span>
+                </p>
+                <p class="pull-right" id="quote-author">Author</p>
+                <div class="row">
+                  <div class="col-md-12">
+                    <a href="#" target="_blank" class="btn btn-info btn-raised" id="tweet-button"> <i class="fa fa-lg fa-twitter"></i> Tweet Me</a>
+                    <a href="#" class="btn btn-raised btn-primary pull-right" id="get-quote-button">Get Quote</a>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" charset="utf-8"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.5.10/js/material.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      $(function() {
+        function getQuote() {
+          var promises = $.ajax({
+            url:"http://quotes.stormconsultancy.co.uk/random.json",
+            type: "GET"
+          });
+
+          return promises;
+        }
+
+        function setTweetUrl(quotes){
+          var url = "https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=" + encodeURIComponent(quotes);
+          $('#tweet-button').attr('href',url);
+        }
+
+        function renderQuote() {
+          getQuote().done(function(data){
+            $('#quote-text').text(data.quote);
+            $('#quote-author').text(data.author);
+
+            setTweetUrl(data.quote);
+          });
+        }
+
+        $(document).ready(function() {
+          $.material.init()
+          renderQuote();
+        });
+
+        $('#get-quote-button').click(function(){
+          renderQuote();
+        })
+      });
+    </script>
+</body>
+
+</html>
