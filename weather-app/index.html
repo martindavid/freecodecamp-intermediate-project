@@ -1,53 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>FreeCodeCamp Weather App</title>
-    <!-- Material Design fonts -->
-  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
-  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
-
-  <!-- Bootstrap -->
-  <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-  <!-- Bootstrap Material Design -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.5.10/css/bootstrap-material-design.min.css">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.5.10/css/ripples.min.css">
-  
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="index.css">
+    <script src="https://use.fontawesome.com/82121cb55d.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <div class="text-center">
-                    <h1 id="type">Free Code Camp</h1>
-                    <h2>Weather App</h2>
-                </div>
-                <hr />
-                <div class="text-center">
-                    <h1><i class="material-icons">place</i><span id="city-name"></span>, <span id="country-name"></span></h1>
-                    <h3><span id="weather-degree"></span></h3>
-                </div>
+            <div class="col s12">
+                    <div class="center-align">
+                        <h1>Today</h1>
+                        <h3><i class="fa fa-map-marker"></i> <span id="city-name"></span>, <span id="country-name"></span></h3>
+                        <h5><i class="fa fa-thermometer-full"></i> <span id="weather-degree">18</span> &deg;<a href="#" id="unit-toggle">C</a></h5>
+                        <h5><span id="weather-type">Clouds</span></h5>
+                        <canvas id="weather-icon" width="128" height="128"></canvas>
+                    </div>
             </div>
         </div>
     </div>
     <div class="sk-cube-grid" id="loader">
-  <div class="sk-cube sk-cube1"></div>
-  <div class="sk-cube sk-cube2"></div>
-  <div class="sk-cube sk-cube3"></div>
-  <div class="sk-cube sk-cube4"></div>
-  <div class="sk-cube sk-cube5"></div>
-  <div class="sk-cube sk-cube6"></div>
-  <div class="sk-cube sk-cube7"></div>
-  <div class="sk-cube sk-cube8"></div>
-  <div class="sk-cube sk-cube9"></div>
-</div>
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.5.10/js/material.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.5.10/js/ripples.min.js"></script>
+        <div class="sk-cube sk-cube1"></div>
+        <div class="sk-cube sk-cube2"></div>
+        <div class="sk-cube sk-cube3"></div>
+        <div class="sk-cube sk-cube4"></div>
+        <div class="sk-cube sk-cube5"></div>
+        <div class="sk-cube sk-cube6"></div>
+        <div class="sk-cube sk-cube7"></div>
+        <div class="sk-cube sk-cube8"></div>
+        <div class="sk-cube sk-cube9"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCwyth-Go6kDC17VzKg9zaAB8X6WXaIrcs"></script>
+    <script src="http://darkskyapp.github.io/skycons/skycons.js"></script>
     <script src="index.js"></script>
 </body>
+
 </html>
