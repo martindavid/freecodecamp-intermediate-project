@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FreeCodeCamp Wikipedia Viewer</title>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://use.fontawesome.com/82121cb55d.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body class="teal accent-3">
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <h1 class="center-align">Wikipedia Viewer</h1>
+                <h4>Search</h4>
+                <nav class="teal">
+                    <div class="nav-wrapper">
+                        <form>
+                            <div class="input-field">
+                                <input id="search" type="search" required>
+                                <label for="search"><i class="material-icons">search</i></label>
+                                <i class="material-icons">close</i>
+                            </div>
+                        </form>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank" class="waves-effect waves-light btn">Random Article</a>
+                <a class="waves-effect waves-light btn pull-right">Search</a>
+            </div>
+        </div>
+    </div>
+    <div class="sk-cube-grid" id="loader">
+        <div class="sk-cube sk-cube1"></div>
+        <div class="sk-cube sk-cube2"></div>
+        <div class="sk-cube sk-cube3"></div>
+        <div class="sk-cube sk-cube4"></div>
+        <div class="sk-cube sk-cube5"></div>
+        <div class="sk-cube sk-cube6"></div>
+        <div class="sk-cube sk-cube7"></div>
+        <div class="sk-cube sk-cube8"></div>
+        <div class="sk-cube sk-cube9"></div>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCwyth-Go6kDC17VzKg9zaAB8X6WXaIrcs"></script>
+    <script src="http://darkskyapp.github.io/skycons/skycons.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
