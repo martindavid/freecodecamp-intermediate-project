@@ -14,27 +14,31 @@
 
 <body class="teal accent-3">
     <div class="container">
-        <div class="row">
+        <div class="row center-align">
             <div class="col s12">
-                <h1 class="center-align">Wikipedia Viewer</h1>
+                <h1>Wikipedia Viewer</h1>
+            </div>
+            <div class="col offset-s3 s6">
                 <h4>Search</h4>
                 <nav class="teal">
                     <div class="nav-wrapper">
-                        <form>
-                            <div class="input-field">
-                                <input id="search" type="search" required>
-                                <label for="search"><i class="material-icons">search</i></label>
-                                <i class="material-icons">close</i>
-                            </div>
-                        </form>
+                        <div class="input-field">
+                            <input id="search-text" type="search" required>
+                            <label for="search"><i class="material-icons">search</i></label>
+                            <i class="material-icons">close</i>
+                        </div>
                     </div>
                 </nav>
             </div>
         </div>
         <div class="row">
-            <div class="col s12">
+            <div class="col offset-s3 s6">
                 <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank" class="waves-effect waves-light btn">Random Article</a>
-                <a class="waves-effect waves-light btn pull-right">Search</a>
+                <a class="waves-effect waves-light btn pull-right" id="search-button">Search</a>
+            </div>
+        </div>
+        <div class="row" >
+            <div class="col s12" id="search-result">
             </div>
         </div>
     </div>
@@ -51,9 +55,7 @@
     </div>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCwyth-Go6kDC17VzKg9zaAB8X6WXaIrcs"></script>
-    <script src="http://darkskyapp.github.io/skycons/skycons.js"></script>
-    <script src="index.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>
